@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(to bottom right, #ff5f6d, #ffc371);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container h1 {
+            margin-bottom: 45px;
+            font-size: 36px;
+            color: #f9fafb;
+            animation: stretch 2s ease-in-out infinite alternate, fade 2s ease-in-out infinite alternate;
+        }
+
+        .container img {
+            width: 310px;
+            height: 245px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes stretch {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes fade {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700">
+</head>
+<body>
+    <div class="container">
+        <h1>👇 Click On Cake 👇</h1>
+        <a href="main.html"><img src="cake.png" alt="cake"></a>
+    </div>
+</body>
+</html>

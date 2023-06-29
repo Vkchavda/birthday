@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday!</title>
+    <style>
+        /* Add CSS styles for your page */
+        body {
+            background: linear-gradient(to bottom, #f57c00, #ff4081);
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 780px;
+            margin: 0 auto;
+            /* Center the container horizontally */
+            padding: 40px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            position: relative;
+            animation: container-border 5s infinite linear;
+            animation: container-animate 15s infinite;
+        }
+
+        @keyframes container-animate {
+            0% {
+                transform: rotate(-2deg);
+            }
+
+            25% {
+                transform: rotate(2deg);
+            }
+
+            50% {
+                transform: rotate(-2deg);
+            }
+
+            75% {
+                transform: rotate(2deg)
+            }
+
+            100% {
+                transform: rotate(-2deg)
+            }
+        }
+
+        @keyframes container-border {
+            0% {
+                border: 5px solid rgb(255, 0, 157);
+            }
+
+            20% {
+                border: 5px solid rgb(255, 176, 30);
+            }
+
+            40% {
+                border: 5px solid rgb(255, 0, 157);
+            }
+
+            60% {
+                border: 5px solid rgb(255, 176, 30);
+            }
+
+            80% {
+                border: 5px solid rgb(255, 0, 157);
+            }
+
+            100% {
+                border: 5px solid rgb(255, 176, 30);
+            }
+        }
+
+        .container video {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: image-border 5s infinite linear;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #ff4081;
+        }
+
+        .message {
+            font-size: 24px;
+            margin-top: 40px;
+            color: #ff4081;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .signature {
+            text-align: center;
+            font-style: italic;
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff4081;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        .birthday-quote {
+            margin-top: 40px;
+            font-style: italic;
+            font-size: 18px;
+            color: #ff4081;
+        }
+
+        /* Particle effect */
+        .particle-effect {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle-effect .particle {
+            position: absolute;
+            background-color: #ff4081;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: particle-move 4s infinite linear;
+            opacity: 0.8;
+        }
+
+        @keyframes particle-move {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translate(-50%, 120vh) scale(2);
+                opacity: 0;
+            }
+        }
+
+        .download-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .download-button a {
+            text-decoration: none;
+        }
+
+        .download-button button {
+            padding: 10px 20px;
+            font-size: 30px;
+            background-color: #ff4081;
+            color: #fff;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .download-button button:hover {
+            background-color: #ff1761;
+        }
+
+        .download-button span {
+            font-size: 30px;
+        }
+
+        .made {
+            display: flex;
+            text-align: right;
+            justify-content: right;
+            margin-top: 7px;
+        }
+
+        .made span {
+            font-size: 25px;
+            color: #cccccc8e;
+        }
+        
+        /* Fireworks effect */
+        .firework-effect {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            background: transparent;
+            overflow: hidden;
+        }
+
+        .firework-effect .firework {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #fff;
+            pointer-events: none;
+            animation: firework-launch 2s;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes firework-launch {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(1);
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-100vh) scale(0.3);
+            }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Fireworks effect -->
+    <div class="firework-effect">
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+    </div>
+
+    <div class="container">
+        <h1>🎂 Happy Birthday, Nishita! 🎂</h1>
+        <div class="song-border">
+            <audio id="birthdaySong" src="birthday_song.mp3" preload="auto" autoplay></audio>
+        </div>
+        <!-- <img class="birthday-image" src="birthday_image.jpg" alt="Birthday Image"> -->
+        <video class="birthday-image" src="birthday_video.mp4" preload="auto" muted autoplay></video>
+        <div class="message">
+            <p>Dear Sistaa,</p>
+            <p>Wishing you a day filled with love, joy, and happiness on your special day!</p>
+            <p>May all your dreams and wishes come true.</p>
+        </div>
+        <div class="signature">With love, Your Bruhh</div>
+        <div class="birthday-quote">"The more you praise and celebrate your life, the more there is in life to
+            celebrate." - Oprah Winfrey</div>
+        <div class="made">
+            <span>Made By VK CHAVDA</span>
+        </div>
+    </div>
+
+    <!-- Particle effect -->
+    <div class="particle-effect"></div>
+
+    <script>
+        // Generate particles
+        var particleEffect = document.querySelector('.particle-effect');
+        var particleCount = 100;
+
+        for (var i = 0; i < particleCount; i++) {
+            var particle = document.createElement('div');
+            particle.className = 'particle';
+            particleEffect.appendChild(particle);
+        }
+
+        // Particle effect
+        function particles() {
+            var particles = document.querySelectorAll('.particle');
+
+            particles.forEach(function (particle) {
+                var randomX = Math.random() * window.innerWidth;
+                var randomY = Math.random() * window.innerHeight;
+                var randomSize = Math.floor(Math.random() * 15) + 5;
+                var randomDelay = Math.random() * 2000;
+                var randomColor = getRandomColor();
+
+                particle.style.left = randomX + 'px';
+                particle.style.top = randomY + 'px';
+                particle.style.width = randomSize + 'px';
+                particle.style.height = randomSize + 'px';
+                particle.style.animationDelay = randomDelay + 'ms';
+                particle.style.background = randomColor;
+            });
+        }
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+
+            return color;
+        }
+
+        particles();
+        setInterval(particles, 3000);
+
+        // Fireworks effect
+        var fireworkEffect = document.querySelector('.firework-effect');
+
+        function fireworks() {
+            var fireworks = document.querySelectorAll('.firework');
+
+            fireworks.forEach(function (firework) {
+                var randomX = Math.random() * window.innerWidth;
+                var randomY = Math.random() * window.innerHeight;
+                var randomDelay = Math.random() * 2000;
+                var randomColor = getRandomColor();
+
+                firework.style.left = randomX + 'px';
+                firework.style.top = randomY + 'px';
+                firework.style.animationDelay = randomDelay + 'ms';
+                firework.style.background = randomColor;
+            });
+        }
+
+        fireworks();
+        setInterval(fireworks, 5000);
+    </script>
+</body>
+
+</html>
